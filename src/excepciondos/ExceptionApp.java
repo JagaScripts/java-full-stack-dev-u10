@@ -13,9 +13,8 @@ public class ExceptionApp {
 
 	/**
 	 * @param args
-	 * @throws Exception 
 	 */
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		
 		//Bloque try{} en el que comienza  
 		try {
@@ -27,11 +26,17 @@ public class ExceptionApp {
 			Exception excepcion = new MiExcepcion("Excepción capturada con mensaje: Esto es un objeto Exception");
 			
 			throw excepcion;
-			
+	
 		}catch (MiExcepcion ex) {
+			
 			//Recupera el código de la excepción y muestra el mensaje
 			System.out.println(ex.getMessage());
 			System.out.println("Programa terminado");
+			
+		} catch (Exception e) {
+			
+			System.out.println(e.getMessage());
+			
 		}
 
 	}
